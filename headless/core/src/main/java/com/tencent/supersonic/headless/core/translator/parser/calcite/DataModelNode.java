@@ -45,7 +45,9 @@ public class DataModelNode extends SemanticNode {
                 && !dataModel.getModelDetail().getTableQuery().isEmpty()) {
             if (dataModel.getModelDetail().getDbType()
                     .equalsIgnoreCase(EngineType.POSTGRESQL.getName())) {
-                String fullTableName = String.join(".public.",
+//                String fullTableName = String.join(".public.",
+//                        dataModel.getModelDetail().getTableQuery().split("\\."));
+                String fullTableName = String.join(".",
                         dataModel.getModelDetail().getTableQuery().split("\\."));
                 sqlTable = "SELECT * FROM " + fullTableName;
             } else {
