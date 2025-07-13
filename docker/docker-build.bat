@@ -4,7 +4,7 @@ setlocal
 REM Function to execute the build script
 :execute_build_script
 echo Executing build script: assembly\bin\supersonic-build.bat
-call assembly\bin\supersonic-build.bat
+call D:\Code\JavaRepo\work\supersonic\assembly\bin\supersonic-build.bat
 if %errorlevel% neq 0 (
     echo Build script failed. Exiting.
     exit /b 1

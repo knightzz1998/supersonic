@@ -14,7 +14,8 @@ spring:
       enabled: true
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:semantic;DATABASE_TO_UPPER=false
+    #url: jdbc:h2:mem:semantic;DATABASE_TO_UPPER=false
+    url: jdbc:h2:file:./semanticdb;DATABASE_TO_UPPER=false # 关键修改：内存→文件模式
     username: root
     password: semantic
   sql:
